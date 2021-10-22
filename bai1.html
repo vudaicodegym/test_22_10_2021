@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1</title>
+</head>
+<body>
+<!--viết hàm tạo 1 mảng có 20 phần tử đc sinh ra ngãu nhiên-->
+<!--sau đó tính tổng các phần tử lẻ-->
+<script>
+   let total = 0;
+   let arr = new Array(20);
+   for (let i = 0; i< arr.length; i++) {
+       arr[i] =  Math.round(Math.random() * (10**15))
+   } document.write('dãy số: ' + arr)
+   for (let i = 0; i < arr.length; i++) {
+       if (arr[i] % 2 != 0) {
+           total = total + arr[i];
+       }
+   }document.write('<br>có tổng các số lẻ là:' + total)
+</script>
+</body>
+</html>

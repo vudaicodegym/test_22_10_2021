@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2</title>
+</head>
+<body>
+<!--tính tổng 25 số nguyên tố đầu tiên-->
+<!--hiển thị ra thẻ h2 in nghiêng-->
+<script>
+    function check(snt) {
+        if (snt < 2) {
+            return false;
+        }
+        for (let i = 2; i < snt; i++) {
+            if (snt % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function display(num) {
+        let sum = 0;
+        let count = 0;
+        for (let i = 0; count < num; i++) {
+            if (check(i)) {
+                count++
+                sum = sum + i
+            }
+        }document.write( '<h2>' + "<i>" + 'tổng 25 số nguyên tố đầu tiên là:' +sum  )
+    }
+
+    display(25);
+</script>
+</body>
+</html>
